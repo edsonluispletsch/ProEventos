@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NavComponent } from './shared/nav/nav.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { EventoService } from './services/evento.service';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
@@ -20,8 +20,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ContatosComponent } from './componets/contatos/contatos.component';
 import { DashboardComponent } from './componets/dashboard/dashboard.component';
-import { PerfilComponent } from './componets/perfil/perfil.component';
+import { PerfilComponent } from './componets/user/perfil/perfil.component';
 import { TituloComponent } from './shared/titulo/titulo.component';
+import { EventoDetalheComponent } from './componets/eventos/evento-detalhe/evento-detalhe.component';
+import { EventoListaComponent } from './componets/eventos/evento-lista/evento-lista.component';
+import { UserComponent } from './componets/user/user.component';
+import { LoginComponent } from './componets/user/login/login.component';
+import { RegistrationComponent } from './componets/user/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { TituloComponent } from './shared/titulo/titulo.component';
     ContatosComponent,
     DashboardComponent,
     PerfilComponent,
-    TituloComponent
+    TituloComponent,
+    EventoDetalheComponent,
+    EventoListaComponent,
+    UserComponent,
+    LoginComponent,
+    RegistrationComponent
    ],
   imports: [
     BrowserModule,
@@ -43,6 +53,7 @@ import { TituloComponent } from './shared/titulo/titulo.component';
     BsDatepickerModule.forRoot(),
     CollapseModule.forRoot(),
     FormsModule,
+    ReactiveFormsModule,
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
