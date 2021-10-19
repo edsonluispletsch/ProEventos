@@ -8,6 +8,8 @@ import { EventosComponent } from './componets/eventos/eventos.component';
 import { PalestrantesComponent } from './componets/palestrantes/palestrantes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { defineLocale } from 'ngx-bootstrap/chronos';
+import { ptBrLocale } from 'ngx-bootstrap/locale';
 import { NavComponent } from './shared/nav/nav.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -28,6 +30,7 @@ import { UserComponent } from './componets/user/user.component';
 import { LoginComponent } from './componets/user/login/login.component';
 import { RegistrationComponent } from './componets/user/registration/registration.component';
 
+defineLocale('pt-br', ptBrLocale);
 @NgModule({
   declarations: [
     AppComponent,
